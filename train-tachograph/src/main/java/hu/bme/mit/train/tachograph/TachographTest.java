@@ -1,5 +1,12 @@
 package hu.bme.mit.train.tachograph;
 
+import hu.bme.mit.train.interfaces.TrainController;
+import hu.bme.mit.train.interfaces.TrainSensor;
+import hu.bme.mit.train.interfaces.TrainUser;
+import hu.bme.mit.train.system.TrainSystem;
+import org.junit.Assert;
+import org.junit.Before;
+
 import static org.junit.Assert.*;
 
 /**
@@ -7,7 +14,6 @@ import static org.junit.Assert.*;
  */
 public class TachographTest {
     TrainController controller;
-    TrainSensor sensor;
     TrainUser user;
     Tachograph graph;
 
@@ -17,16 +23,16 @@ public class TachographTest {
         controller = system.getController();
         user = system.getUser();
         graph = new Tachograph();
-        sensor.overrideSpeedLimit(50);
     }
 
     @org.junit.Test
     public void testIsTableEmpty() throws Exception {
+        Assert.assertTrue(graph.isTableEmpty());
+
         user.overrideJoystickPosition(5);
-
         controller.followSpeed();
-        graph.
+        graph.record(user.getJoystickPosition(), controller.getReferenceSpeed());
 
-
+        Assert.assertFalse(graph.isTableEmpty());
     }
 }
