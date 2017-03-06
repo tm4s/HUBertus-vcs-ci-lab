@@ -3,10 +3,10 @@ package hu.bme.mit.train.tachograph;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 
-public class Tanle {
+public class Tachograph {
 	Table<Long, Integer, Integer> table;
 
-	public TrainTachograph() {
+	public Tachograph() {
 		table = HashBasedTable.create();
 	}
 
