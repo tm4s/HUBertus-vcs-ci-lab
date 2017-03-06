@@ -1,7 +1,7 @@
 # vcs-ci-lab
 Sample application for the version control systems and continuous integration laboratory
 
-#### Contributors
+## Contributors
 * Tamás Szántó *ET7D8H*
 * Zsolt Németh *VOZ3TO*
 
