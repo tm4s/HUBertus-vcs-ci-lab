@@ -2,8 +2,8 @@
 Sample application for the version control systems and continuous integration laboratory
 
 ### Contributors
-* Tamás Szántó
-* Zsolt Németh
+* Tamás Szántó *ET7D8H
+* Zsolt Németh *VOZ3TO
 
 
 
