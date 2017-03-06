@@ -50,5 +50,8 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 	}
 
-	
+	@Test
+	public void testFail() throws Exception {
+		Assert.fail();
+	}
 }
